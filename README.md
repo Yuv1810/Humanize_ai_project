@@ -40,10 +40,17 @@ Make sure you have the following installed on your development machine:
 2. **Install dependencies for the frontend and backend:**
 
     ```bash
-    cd frontend
+    cd Team20k
+    cd 20k
     npm install
-    cd ../backend
+    cd ..
+    cd ../be
     npm install
+    node app.js
+    cd ..
+    cd app
+    pip install -r requirement.txt
+    python3 main.py
     ```
 
 ## Running the Application
@@ -53,7 +60,8 @@ Make sure you have the following installed on your development machine:
 1. Navigate to the `frontend` directory:
 
     ```bash
-    cd frontend
+    cd Team20k
+    cd 20k
     ```
 
 2. Start the Next.js development server:
@@ -66,70 +74,7 @@ Make sure you have the following installed on your development machine:
 
 ### Running the Backend
 
-1. Navigate to the `backend` directory:
+The backend server will be running on `http://localhost:3002`.
 
-    ```bash
-    cd backend
-    ```
+The python server will be running on `http://localhost:8000`.
 
-2. Start the Express server:
-
-    ```bash
-    npm start
-    ```
-
-3. The backend server will be running on `http://localhost:5000`.
-
-### Running Both Frontend and Backend Concurrently
-
-To run both the frontend and backend concurrently, you can use a tool like `concurrently`:
-
-1. Navigate to the root of the project:
-
-    ```bash
-    cd ..
-    ```
-
-2. Install `concurrently` globally if you haven't already:
-
-    ```bash
-    npm install -g concurrently
-    ```
-
-3. Add the following script to your root `package.json`:
-
-    ```json
-    "scripts": {
-      "start": "concurrently \"npm run dev --prefix frontend\" \"npm start --prefix backend\""
-    }
-    ```
-
-4. Run both servers:
-
-    ```bash
-    npm start
-    ```
-
-## Project Structure
-
-```plaintext
-yourproject/
-│
-├── frontend/           # Next.js frontend application
-│   ├── public/         # Public assets
-│   ├── pages/          # Next.js pages
-│   ├── components/     # React components
-│   ├── styles/         # Stylesheets
-│   ├── package.json    # Frontend dependencies and scripts
-│   └── ...             # Other frontend files
-│
-├── backend/            # Express backend application
-│   ├── routes/         # API routes
-│   ├── models/         # Database models
-│   ├── controllers/    # Route controllers
-│   ├── middleware/     # Custom middleware
-│   ├── package.json    # Backend dependencies and scripts
-│   └── ...             # Other backend files
-│
-├── package.json        # Root package.json (if using concurrently)
-└── README.md           # This README file
