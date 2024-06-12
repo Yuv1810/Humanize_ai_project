@@ -1,4 +1,4 @@
-# Project Name
+# Humanize_Ai_Project
 
 ## Description
 
